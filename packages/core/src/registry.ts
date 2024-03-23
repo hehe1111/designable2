@@ -17,6 +17,11 @@ import { isBehaviorHost } from './externals'
 import { TreeNode } from './models'
 import { isBehaviorList } from './externals'
 
+export const SUPPORT_LOCALES = {
+  ZH_CN: 'zh-cn',
+  EN_US: 'en-us',
+}
+
 const getISOCode = (language: string) => {
   let isoCode = DESIGNER_LANGUAGE_STORE.value
   let lang = lowerSnake(language)
