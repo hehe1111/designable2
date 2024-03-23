@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Space, Button, Radio } from 'antd'
 import { GithubOutlined } from '@ant-design/icons'
 import { useDesigner, TextWidget } from '@pind/designable-react'
-import { GlobalRegistry } from '@pind/designable-core'
+import { GlobalRegistry, SUPPORT_LOCALES } from '@pind/designable-core'
 import { observer } from '@formily/react'
 import { loadInitialSchema, saveSchema } from '../service'
 
@@ -11,10 +11,10 @@ export const ActionsWidget = observer(() => {
   useEffect(() => {
     loadInitialSchema(designer)
   }, [])
-  const supportLocales = ['zh-cn', 'en-us', 'ko-kr']
+  const supportLocales = Object.values(SUPPORT_LOCALES)
   useEffect(() => {
     if (!supportLocales.includes(GlobalRegistry.getDesignerLanguage())) {
-      GlobalRegistry.setDesignerLanguage('zh-cn')
+      GlobalRegistry.setDesignerLanguage(SUPPORT_LOCALES.ZH_CN)
     }
   }, [])
   return (
@@ -26,9 +26,8 @@ export const ActionsWidget = observer(() => {
         value={GlobalRegistry.getDesignerLanguage()}
         optionType="button"
         options={[
-          { label: 'English', value: 'en-us' },
-          { label: '简体中文', value: 'zh-cn' },
-          { label: '한국어', value: 'ko-kr' },
+          { label: 'English', value: SUPPORT_LOCALES.EN_US },
+          { label: '简体中文', value: SUPPORT_LOCALES.ZH_CN },
         ]}
         onChange={(e) => {
           GlobalRegistry.setDesignerLanguage(e.target.value)
