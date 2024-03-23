@@ -31,3 +31,25 @@ This project exists thanks to all the people who contribute.
 <p>
 <a href="https://github.com/pindjs/designable/graphs/contributors"><img src="https://contrib.rocks/image?repo=alibaba/designable" /></a>
 </p>
+
+## 启动
+
+**pnpm 必须升级到 8.x.x 版本**
+
+使用其他版本如 pnpm@6 安装依赖会导致 `pnpm-lock.yaml` 的 `lockfileVersion` 被修改为 5.3，也就是使用 pnpm@6 安装依赖会修改 `pnpm-lock.yaml` 文件。最终导致运行 `pnpm start` 时报奇怪的错误。
+
+```bash
+# 方便执行 pnpm clean：一键移除各个包下面的 node_modules
+pnpm i lerna@6 -g
+pnpm i
+cd formily/antd
+pnpm start
+
+# 以下命令没用
+pnpm bootstrap
+pnpm start
+
+# 拖一个输入框后，会报错
+pnpm start:playground
+pnpm start:basic
+```
