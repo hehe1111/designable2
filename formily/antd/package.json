@@ -39,6 +39,7 @@
     "@types/react-is": "^17.0.3",
     "@vitejs/plugin-basic-ssl": "^1.0.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "antd": "^5.1.0",
     "less": "^3.13.1",
     "react-error-boundary": "^3.1.4",
     "ts-loader": "^7.0.5",

@@ -26,4 +26,6 @@ export {
   FormCollapse,
   FormLayout,
   FormGrid,
+  // ! 必须在这里导出
+  CustomTooltip,
 } from './components'

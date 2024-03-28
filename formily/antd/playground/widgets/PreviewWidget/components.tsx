@@ -28,6 +28,7 @@ export {
   ArrayCards,
 } from '@formily/antd-v5'
 export { Card, Slider, Rate } from 'antd'
+export { CustomTooltip } from '../../../src/components/custom/Tooltip'
 
 export const Text: React.FC<{
   value?: string

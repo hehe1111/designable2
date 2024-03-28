@@ -3,6 +3,14 @@ import { ISchema } from '@formily/react'
 export const Select: ISchema = {
   type: 'object',
   properties: {
+    url: {
+      type: 'string',
+      'x-decorator': 'FormItem',
+      'x-component': 'Input.TextArea',
+      'x-component-props': {
+        autoSize: true,
+      },
+    },
     mode: {
       type: 'string',
       enum: ['multiple', 'tags', { value: null }],

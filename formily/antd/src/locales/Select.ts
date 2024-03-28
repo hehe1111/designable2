@@ -3,6 +3,10 @@ export const Select = {
     title: '选择框',
     settings: {
       'x-component-props': {
+        url: {
+          title: 'url',
+          tooltip: '远程搜索 url',
+        },
         mode: {
           title: '模式',
           dataSource: ['多选', '标签', '单选'],
@@ -44,6 +48,10 @@ export const Select = {
     title: 'Select',
     settings: {
       'x-component-props': {
+        url: {
+          title: 'url',
+          tooltip: 'Remote search url',
+        },
         mode: {
           title: 'Mode',
           dataSource: ['Multiple', 'Tags', 'Single'],
