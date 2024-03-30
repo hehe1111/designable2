@@ -1,4 +1,4 @@
-import { Alias, defineConfig } from 'vite'
+import { Alias, defineConfig, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { GlobSync } from 'glob'
 import { resolve } from 'path'
@@ -32,7 +32,8 @@ export default defineConfig({
   root: '.',
   plugins: [
     react(),
-    // basicSsl()
+    // basicSsl(),
+    // splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: [
@@ -54,8 +55,45 @@ export default defineConfig({
     },
   },
   server: {},
+  base: process.env.NODE_ENV === 'development' ? '' : '/designable2',
   build: {
-    sourcemap: true,
+    sourcemap: false,
     outDir: './build',
+    rollupOptions: {
+      output: {
+        // manualChunks 拆包后，很容易出现产物脚本间循环引用的问题。参考：https://juejin.cn/book/7050063811973218341/section/7066601785166659620#heading-3
+        manualChunks(id: any) {
+          if (id.includes('node_modules')) {
+            // ! /@formily 规则必须在 /lodash、/dayjs 规则之前
+            if (id.includes('/@formily')) {
+              return '@formily'
+            }
+
+            if (id.includes('/lodash')) {
+              return 'lodash'
+            }
+
+            if (id.includes('/dayjs')) {
+              return 'dayjs'
+            }
+
+            if (id.includes('/@ant-design/icons')) {
+              return '@ant-design/icons'
+            }
+
+            if (id.includes('/antd')) {
+              return 'antd'
+            }
+
+            if (['react', 'react-dom'].some((i) => id.includes(i))) {
+              return 'react-vendor'
+            }
+
+            // 除以上之外的其他第三方库
+            return 'vendor'
+          }
+        },
+      },
+    },
   },
 })
