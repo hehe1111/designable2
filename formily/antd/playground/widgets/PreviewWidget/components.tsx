@@ -1,3 +1,6 @@
+// $$: 预览用。本文件会被 formily/antd/playground/main.tsx 使用
+// ! $$: 自定义组件必须在这里导出一份，否则预览时，会因为找不到组件，导致无法正常预览
+
 import React from 'react'
 export {
   Form,

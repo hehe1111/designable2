@@ -114,6 +114,7 @@ const App = () => {
                 <ViewPanel type="MARKUP" scrollable={false}>
                   {(tree) => <MarkupSchemaWidget tree={tree} />}
                 </ViewPanel>
+                {/* $$: 预览面板 */}
                 <ViewPanel type="PREVIEW">
                   {(tree) => <PreviewWidget tree={tree} />}
                 </ViewPanel>

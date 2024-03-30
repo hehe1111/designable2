@@ -11,6 +11,7 @@ import { Alert } from 'antd'
 const { ErrorBoundary } = Alert
 
 const SchemaField = createSchemaField({
+  // $$: 预览用组件
   components,
 })
 
