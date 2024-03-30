@@ -166,6 +166,7 @@ export type SourceType =
   | 'Layouts'
   | 'Arrays'
   | 'Displays'
+  | 'Customs'
   | 'Others'
   | (string & {})
 
