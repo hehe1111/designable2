@@ -8,14 +8,14 @@ import { AllLocales } from '../../../locales'
 
 import { connect, mapProps, mapReadPretty, ReactFC } from '@formily/react'
 
-import { Select as FormilySelect } from '@formily/antd-v5'
-
 // export const CustomTooltip: DnFC<React.ComponentProps<any>> = FormilySelect
 
 // export const CustomTooltip: DnFC<React.ComponentProps<TooltipProps>> = Tooltip
 export const CustomTooltip: DnFC<React.ComponentProps<any>> = connect(
   Tooltip,
-  mapProps({ title: 'realTitle', children: 'children' }),
+  // mapProps({ title: 'realTitle', children: 'children' }),
+  // children 会自动传入，不需要 mapProps
+  // mapProps({ children: 'children' }),
   mapReadPretty((value) => <div>CustomTooltip 2222 : {value || '-'}</div>)
 )
 
@@ -35,7 +35,8 @@ CustomTooltip.Resource = createResource('Customs', {
     {
       componentName: 'Field',
       props: {
-        title: 'CustomTooltip',
+        // 字段属性 > 标题
+        title: '',
         'x-decorator': 'FormItem',
         'x-component': 'CustomTooltip',
       },
