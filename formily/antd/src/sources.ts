@@ -26,6 +26,6 @@ export {
   FormCollapse,
   FormLayout,
   FormGrid,
-  // ! 必须在这里导出
+  // ! $$: 必须在这里导出，才能在设计器的左侧「组件」区域中使用
   CustomTooltip,
 } from './components'
