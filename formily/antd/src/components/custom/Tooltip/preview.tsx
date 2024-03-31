@@ -3,8 +3,8 @@ import { Tooltip, TooltipProps } from 'antd'
 import { createBehavior, createResource } from '@pind/designable-core'
 import { DnFC } from '@pind/designable-react'
 import { createFieldSchema } from '../../Field'
-import { AllSchemas } from '../../../schemas'
-import { AllLocales } from '../../../locales'
+import { CustomTooltip as Setters } from './setters'
+import { CustomTooltip as Locales } from './setters-locales'
 
 import { connect, mapProps, mapReadPretty, ReactFC } from '@formily/react'
 
@@ -24,9 +24,9 @@ CustomTooltip.Behavior = createBehavior({
   extends: ['Field'],
   selector: (node) => node.props['x-component'] === 'CustomTooltip',
   designerProps: {
-    propsSchema: createFieldSchema(AllSchemas.CustomTooltip),
+    propsSchema: createFieldSchema(Setters),
   },
-  designerLocales: AllLocales.CustomTooltip,
+  designerLocales: Locales,
 })
 
 CustomTooltip.Resource = createResource('Customs', {
