@@ -19,6 +19,16 @@ export const ActionsWidget = observer(() => {
   }, [])
   return (
     <Space style={{ marginRight: 10 }}>
+      <Button
+        href={
+          GlobalRegistry.getDesignerLanguage() === SUPPORT_LOCALES.EN_US
+            ? 'https://ant-design.antgroup.com/components/overview'
+            : 'https://ant-design.antgroup.com/components/overview-cn/'
+        }
+        target="__blank"
+      >
+        Ant Design
+      </Button>
       <Button href="https://designable-fusion.formilyjs.org">
         Alibaba Fusion
       </Button>
