@@ -25,7 +25,7 @@ CustomButton.Behavior = createBehavior({
 })
 
 CustomButton.Resource = createResource('Customs', {
-  icon: 'ObjectSource',
+  icon: 'ButtonSource',
   elements: [
     {
       componentName: 'Field',
