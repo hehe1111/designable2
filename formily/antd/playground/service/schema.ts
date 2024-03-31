@@ -10,7 +10,7 @@ export const saveSchema = (designer: Engine) => {
     'formily-schema',
     JSON.stringify(transformToSchema(designer.getCurrentTree()))
   )
-  message.success('Save Success')
+  message.success('Save to LocalStorage Success')
 }
 
 export const loadInitialSchema = (designer: Engine) => {
