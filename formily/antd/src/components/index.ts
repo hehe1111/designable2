@@ -25,4 +25,7 @@ export * from './FormTab'
 export * from './FormCollapse'
 export * from './FormGrid'
 export * from './FormLayout'
+
+// ! $$: 自定义组件必须在这里导出，才能在设计器的左侧「组件」区域中使用
 export * from './custom/Tooltip'
+export * from './custom/Button'
