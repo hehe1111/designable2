@@ -30,7 +30,7 @@ CustomTooltip.Behavior = createBehavior({
 })
 
 CustomTooltip.Resource = createResource('Customs', {
-  icon: 'ObjectSource',
+  icon: 'TooltipSource',
   elements: [
     {
       componentName: 'Field',
