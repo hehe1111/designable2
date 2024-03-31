@@ -11,7 +11,7 @@ export const CustomButton: ISchema = {
       'x-component-props': {
         defaultValue: 'default',
       },
-      enum: ['primary', 'dashed', 'link', 'text', 'default', { value: null }],
+      enum: ['primary', 'dashed', 'link', 'text', 'default'],
     },
     onClick: {
       type: 'string',
