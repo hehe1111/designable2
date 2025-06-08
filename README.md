@@ -45,12 +45,13 @@ pnpm i
 cd formily/antd
 pnpm start
 
+# 打开一个简版的 playground
+# 拖一个输入框后，会报错
+pnpm start:playground
+
 # ======== 以下命令可以不用看了 ========
 
 # 以下命令没用
 pnpm bootstrap
 pnpm start
-
-# 拖一个输入框后，会报错
-pnpm start:playground
 ```
