@@ -1,0 +1,91 @@
+{
+  "form": { "labelCol": 6, "wrapperCol": 12 },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "1smzl3pk3j4": {
+        "type": "void",
+        "x-component": "FormLayout",
+        "x-component-props": { "layout": "horizontal" },
+        "x-pattern": "editable",
+        "x-designable-id": "1smzl3pk3j4",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-comment": "下面的 title 用于设计器右边 setter，x-decorator-props.label 用于设计器中间画布 + 实际页面上显示",
+            "title": "姓名",
+            "x-decorator": "FormItem",
+            "x-component": "Input",
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {
+              "label": "姓名",
+              "layout": "vertical",
+              "colon": false
+            },
+            "name": "name",
+            "x-designable-id": "k1ryl00nz7x",
+            "x-index": 0
+          },
+          "age": {
+            "type": "string",
+            "title": "年龄",
+            "x-decorator": "FormItem",
+            "x-component": "Input",
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {
+              "label": "年龄",
+              "layout": "vertical",
+              "colon": false
+            },
+            "name": "age",
+            "x-designable-id": "du2v3150ltq",
+            "x-index": 1
+          }
+        },
+        "x-index": 0
+      },
+      "w7tzw4o35rm": {
+        "type": "void",
+        "x-component": "FormLayout",
+        "x-component-props": {},
+        "x-designable-id": "w7tzw4o35rm",
+        "properties": {
+          "address": {
+            "type": "string",
+            "title": "地址",
+            "x-decorator": "FormItem",
+            "x-component": "Input",
+            "x-validator": [],
+            "x-component-props": {},
+            "x-decorator-props": {
+              "label": "地址",
+              "colon": false,
+              "layout": "vertical"
+            },
+            "name": "address",
+            "x-designable-id": "php16wjam9b",
+            "x-index": 0
+          },
+          "g4cwz6w9pdp": {
+            "type": "void",
+            "title": "提交",
+            "x-decorator": "FormItem",
+            "x-component": "Button",
+            "x-validator": [],
+            "x-component-props": {
+              "children": "提交",
+              "onClick": "{{onClick}}"
+            },
+            "x-decorator-props": { "layout": "vertical" },
+            "x-designable-id": "g4cwz6w9pdp",
+            "x-index": 1
+          }
+        },
+        "x-index": 1
+      }
+    },
+    "x-designable-id": "lzo6w3lsyis"
+  }
+}
