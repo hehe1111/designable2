@@ -34,6 +34,8 @@ This project exists thanks to all the people who contribute.
 
 ## 启动
 
+**node 使用 18 版本**
+
 **pnpm 必须升级到 8.x.x 版本**
 
 使用其他版本如 pnpm@6 安装依赖会导致 `pnpm-lock.yaml` 的 `lockfileVersion` 被修改为 5.3，也就是使用 pnpm@6 安装依赖会修改 `pnpm-lock.yaml` 文件。最终导致运行 `pnpm start` 时报奇怪的错误。
