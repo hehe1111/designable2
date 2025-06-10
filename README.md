@@ -32,7 +32,7 @@ This project exists thanks to all the people who contribute.
 <a href="https://github.com/pindjs/designable/graphs/contributors"><img src="https://contrib.rocks/image?repo=alibaba/designable" /></a>
 </p>
 
-## 启动
+## 启动 formily/antd
 
 **node 使用 18 版本**
 
@@ -56,4 +56,12 @@ pnpm start:playground
 # 以下命令没用
 pnpm bootstrap
 pnpm start
+```
+
+## 构建全部子包
+
+项目目录下
+
+```bash
+pnpm build
 ```
